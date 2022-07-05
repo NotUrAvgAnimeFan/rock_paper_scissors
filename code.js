@@ -11,7 +11,7 @@ function computerPlay() {
 
 }
 
-function playOneRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection == "rock") {
         if (computerSelection == "Rock") {
@@ -37,5 +37,15 @@ function playOneRound(playerSelection, computerSelection) {
         } else {
             return "Draw! Scissors don't beat or lose to Scissors";
         }
+    }
+}
+
+function game() {
+    let userChoice;
+    let result;
+    for (let i = 0; i < 5; i++) {
+        userChoice = prompt("Choose your weapon!");
+        result = playRound(userChoice, computerPlay());
+        console.log(result);
     }
 }
