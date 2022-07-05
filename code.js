@@ -10,3 +10,32 @@ function computerPlay() {
     }
 
 }
+
+function playOneRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
+    if (playerSelection == "rock") {
+        if (computerSelection == "Rock") {
+            return "Draw! Rock doesn't beat or lose to Rock";
+        } else if (computerSelection == "Paper") {
+            return "You Lose! Paper beats Rock";
+        } else {
+            return "You Win! Rock beats Scissors";
+        }
+    } else if (playerSelection == "paper") {
+        if (computerSelection == "Rock") {
+            return "You Win! Paper beats Rock";
+        } else if (computerSelection == "Paper") {
+            return "Draw! Paper doesn't beat or lose to Paper";
+        } else {
+            return "You Lose! Scissors beat Paper";
+        }
+    } else {
+        if (computerSelection == "Rock") {
+            return "You Lose! Rock beats Scissors";
+        } else if (computerSelection == "Paper") {
+            return "You Win! Scissors beat Paper";
+        } else {
+            return "Draw! Scissors don't beat or lose to Scissors";
+        }
+    }
+}
